@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "../pages/dashboard/Dashboard";
 import FormLogin from "../pages/login/FormLogin";
 import RegistrationForm from "../pages/registration/RegistrationForm";
@@ -27,7 +27,7 @@ const Router = () => {
   };
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <GlobalProvider>
           <Routes>
             <Route
@@ -55,7 +55,7 @@ const Router = () => {
             <Route path="/dashboard/send" element={<Send />} />
           </Routes>
         </GlobalProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
