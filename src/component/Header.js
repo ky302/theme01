@@ -6,7 +6,6 @@ import { GlobalContext } from "../context/GlobalContext";
 const Header = () => {
   const location = useLocation();
   const { state, handleFunction } = useContext(GlobalContext);
-  let { open, setOpen } = state;
 
   let { handleClick } = handleFunction;
 
@@ -16,7 +15,7 @@ const Header = () => {
         <div className="block lg:hidden top-2 p-4">
           <button
             onClick={handleClick}
-            className="flex p-2 items-center rounded-full shadow text-white/80 text-md"
+            className="flex p-2 lg:hidden items-center rounded-full shadow text-white/80 text-md"
           >
             <svg
               width={20}
@@ -32,52 +31,56 @@ const Header = () => {
         </div>
         <div className="relative z-20 flex flex-col h-full px-5 md:w-full top-2 ">
           <div className="relative p-1 flex items-center w-full space-x-4 justify-between">
-            <div className=" flex lg:gap-4  items-center">
-              <Link
-                to={"/dashboard"}
-                className={`block text-base rounded-lg font-medium ${
-                  location.pathname === "/dashboard" ? "bg-dash-layout/50" : ""
-                }`}
-              >
-                <button
-                  type="submit"
-                  className=" flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+            <div className=" flex items-center">
+              <div className=" flex lg:gap-4">
+                <Link
+                  to={"/dashboard"}
+                  className={`block text-base rounded-lg font-medium ${
+                    location.pathname === "/dashboard"
+                      ? "bg-dash-layout/50"
+                      : " bg-dash-layout/10"
+                  }`}
                 >
-                  Activity
-                </button>
-              </Link>
+                  <button
+                    type="submit"
+                    className=" flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Activity
+                  </button>
+                </Link>
 
-              <Link
-                to={"/dashboard/status"}
-                className={`block text-base rounded-lg font-medium ${
-                  location.pathname === "/dashboard/status"
-                    ? "bg-dash-layout/50"
-                    : ""
-                }`}
-              >
-                <button
-                  type="submit"
-                  className=" flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+                <Link
+                  to={"/dashboard/status"}
+                  className={`block text-base rounded-lg font-medium ${
+                    location.pathname === "/dashboard/status"
+                      ? "bg-dash-layout/50"
+                      : "bg-dash-layout/10"
+                  }`}
                 >
-                  Status
-                </button>
-              </Link>
+                  <button
+                    type="submit"
+                    className=" flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Status
+                  </button>
+                </Link>
 
-              <Link
-                to={"/dashboard/send"}
-                className={`block text-base rounded-lg font-medium ${
-                  location.pathname === "/dashboard/send"
-                    ? "bg-dash-layout/50"
-                    : ""
-                }`}
-              >
-                <button
-                  type="submit"
-                  className="flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+                <Link
+                  to={"/dashboard/send"}
+                  className={`block text-base rounded-lg font-medium ${
+                    location.pathname === "/dashboard/send"
+                      ? "bg-dash-layout/50"
+                      : "bg-dash-layout/10"
+                  }`}
                 >
-                  Send
-                </button>
-              </Link>
+                  <button
+                    type="submit"
+                    className="flex justify-center items-center px-7 py-2 bg-transparent text-white/80 font-medium text-sm leading-snug rounded-lg hover:bg-dash-layout/50 hover:shadow-lg focus:bg-dash-layout/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dash-layout active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Send
+                  </button>
+                </Link>
+              </div>
 
               <form className="flex items-center justify-center ml-4">
                 <label htmlFor="simple-search" className="sr-only">

@@ -61,7 +61,7 @@ const Send = () => {
             <h1>Creat Form</h1>
           </div>
           <div className=" h-80 overflow-y-scroll mt-2">
-            <div className=" flex px-20 py-4 bg-white rounded-b-md lg:mx-0 md:mx-4 sm:mx-4 ">
+            <div className=" flex px-8 py-4 bg-white rounded-b-md lg:mx-0 md:mx-0 sm:mx-0 ">
               <form
                 onSubmit={handleSubmit}
                 className="w-full font-bold text-black/80"
@@ -93,17 +93,17 @@ const Send = () => {
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="resize-none mt-4 border rounded-md border-gray-400 p-2 w-2/4"
+                  className="resize-none mt-4 border rounded-md border-gray-400 p-2 w-full"
                   rows={4}
                 />
                 <div className="mt-4">
                   <input
                     type="file"
                     onChange={handleImageChange}
-                    className=" bg-red-500 p-2 rounded text-white"
+                    className=" bg-red-500 p-2 lg:w-1/4 sm:w-full md:w-1/2 rounded text-white"
                   />
                 </div>
-                <div className=" flex justify-end">
+                <div className=" flex lg:justify-end sm:justify-start md:justify-start">
                   <button
                     type="submit"
                     onClick={sendMessage}
@@ -126,12 +126,14 @@ const Send = () => {
           }
 
           ::-webkit-scrollbar-track {
-            border-radius: 10px 10px 10px 10px;
+            // border-radius: 10px 10px 10px 10px;
             background-color: #ffff;
             // background: red;
-            border : 2px solid #27272a;
+            border-right: 2px solid #27272a;
+            border-left: 2px solid #27272a;
         
           }
+          
           
           ::-webkit-scrollbar-thumb {
             background-color: #29463e;

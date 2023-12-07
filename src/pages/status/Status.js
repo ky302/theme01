@@ -32,7 +32,7 @@ const Status = () => {
             <p>Lasst Leght: 27 January 2023</p>
           </div>
           <div className=" h-64 overflow-y-scroll mt-2">
-            <div className=" bg-white rounded-b-md lg:mx-0 md:mx-4 sm:mx-4 h-screen">
+            <div className=" bg-white rounded-b-md lg:mx-0 md:mx-0 sm:mx-0 h-screen">
               <h1>Conten 7</h1>
             </div>
           </div>
@@ -45,14 +45,15 @@ const Status = () => {
             
               
           }
-
           ::-webkit-scrollbar-track {
-            border-radius: 10px 10px 10px 10px;
+            // border-radius: 10px 10px 10px 10px;
             background-color: #ffff;
             // background: red;
-            border : 2px solid #27272a;
+            border-right: 2px solid #27272a;
+            border-left: 2px solid #27272a;
         
           }
+          
           
           ::-webkit-scrollbar-thumb {
             background-color: #29463e;

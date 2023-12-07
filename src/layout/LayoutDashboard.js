@@ -12,7 +12,7 @@ const LayoutDashboard = (props) => {
           <div className="flex flex-col w-full h-screen md:space-y-4">
             <Header />
 
-            <div className="overflow-auto h-screen pb-4 px-2 md:px-6">
+            <div className=" overflow-y-auto h-screen pb-4 px-2 md:px-6">
               {props.children}
             </div>
             <div className="grid items-end">

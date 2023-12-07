@@ -8,13 +8,13 @@ const Contact = () => {
         <div className=" bg-light-white flex flex-wrap w-52 justify-center lg:mx-0 md:mx-4 sm:mx-4 items-center rounded-md mb-8 text-sm p-2 font-semibold text-white">
           <h1>Account: +6281123456789</h1>
         </div>
-        <div className=" bg-dash-layout text-white lg:mx-0 md:mx-4 sm:mx-4 rounded-t-md p-3 font-semibold">
+        <div className=" bg-dash-layout text-white lg:mx-0 md:mx-0 sm:mx-0 rounded-t-md p-3 font-semibold">
           <h1>Call History</h1>
           <p>Lasst Leght: 27 January 2023</p>
         </div>
         <div className=" h-72 overflow-y-scroll mt-2">
-          <div className=" bg-white rounded-b-md lg:mx-0 md:mx-4 sm:mx-4 h-screen">
-            <h1>Conten 2</h1>
+          <div className=" bg-white rounded-b-md lg:mx-0 md:mx-0 sm:mx-0 h-screen">
+            <h1>Conten 6</h1>
           </div>
         </div>
         <style>
@@ -23,15 +23,14 @@ const Contact = () => {
             width: 14px;
             background-color: #ffff;
             border-radius: 10px 10px 10px 10px;
-            
-              
           }
 
           ::-webkit-scrollbar-track {
-            border-radius: 10px 10px 10px 10px;
+            // border-radius: 10px 10px 10px 10px;
             background-color: #ffff;
             // background: red;
-            border : 2px solid #27272a;
+            border-right: 2px solid #27272a;
+            border-left: 2px solid #27272a;
         
           }
           

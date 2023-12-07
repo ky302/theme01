@@ -28,7 +28,7 @@ const Dashboard = ({ route }) => {
         <div className=" grid lg:grid-cols-5 md:grid-cols-2 lg:mx-0 md:mx-4 sm:grid-cols-1 sm:mx-4 lg:gap-8 md:gap-4">
           {DashboardDataCard.map(({ path, title, count, Icon }, index) => (
             <Link to={path} key={index}>
-              <div className="flex flex-col items-center justify-center bg-white rounded-b-md mt-2 h-32 transition ease-in-out duration-300 hover:-translate-y-x-1 hover:scale-95">
+              <div className="flex flex-col items-center justify-center bg-white rounded-md mt-2 h-32 transition ease-in-out duration-300 hover:-translate-y-x-1 hover:scale-95">
                 <div className="text-center font-bold">
                   <h1 className="text-4xl">{count}</h1>
                   <p>{title}</p>
@@ -54,7 +54,17 @@ const Dashboard = ({ route }) => {
               <h1>Lates Location</h1>
             </div>
             <div className=" flex justify-center items-center bg-white h-96 mt-2 rounded-b-md border-4 border-dash-layout ">
-              <img src={image} alt="" className=" object-cover" />
+              <div className="relative w-full h-96">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12080.73732861526!2d-74.0059418!3d40.7127847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA2JzEwLjAiTiA3NMKwMjUnMzcuNyJX!5e0!3m2!1sen!2sus!4v1648482801994!5m2!1sen!2sus"
+                  frameBorder={0}
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
